@@ -1,103 +1,145 @@
-🏥 Obesity Level & BMI Prediction System
-📌 Project Overview
+# NutriPredict
 
-This project is an end-to-end machine learning application designed to predict an individual’s Body Mass Index (BMI) and obesity level based on lifestyle, dietary habits, and physical activity data. The system uses real-world health data and compares multiple machine learning algorithms to automatically select the best-performing models for both regression and classification tasks.
+## Overview
 
-🎯 Problem Statement
+NutriPredict is a Machine Learning-based web application that predicts an individual's Body Mass Index (BMI) and Obesity Level based on health and lifestyle attributes. The project demonstrates an end-to-end machine learning pipeline, including data preprocessing, model training, model evaluation, comparison of multiple algorithms, and deployment using Streamlit.
 
-Obesity is a major health concern influenced by various lifestyle factors such as diet, physical activity, and daily habits. The goal of this project is to:
+---
 
-Predict BMI values using regression models
+## Problem Statement
 
-Classify individuals into obesity categories using classification models
+Maintaining a healthy lifestyle requires continuous monitoring of health indicators such as BMI and obesity level. Manual calculation and interpretation can be time-consuming and may not consider multiple influencing factors. NutriPredict provides an automated prediction system that assists users by estimating BMI and obesity category based on user-provided health information.
 
-Provide real-time predictions through an interactive web interface
+---
 
-📊 Dataset
+## Objectives
 
-Name: Estimation of Obesity Levels Based on Eating Habits and Physical Condition
+- Predict BMI as a regression task.
+- Predict obesity level as a classification task.
+- Compare multiple machine learning algorithms.
+- Evaluate model performance using appropriate metrics.
+- Deploy the trained models as an interactive web application.
 
-Source: UCI Machine Learning Repository (available on Kaggle)
+---
 
-Data Type: Structured tabular data
+## Technology Stack
 
-Features: Age, Gender, Height, Weight, food habits, physical activity, lifestyle indicators
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Streamlit
+- Joblib
 
-Target Variables:
+---
 
-BMI (Regression target)
+## Machine Learning Pipeline
 
-NObeyesdad (Classification target)
+### 1. Data Collection
 
-🛠️ Technologies Used
+Health and lifestyle dataset containing demographic, physical, and behavioral features.
 
-Programming Language: Python
+### 2. Data Preprocessing
 
-Libraries: NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn
+- Missing value handling
+- Categorical feature encoding
+- Feature selection
+- Data splitting (Train-Test Split)
 
-Model Deployment: Streamlit
+### 3. Regression Models
 
-Model Persistence: Joblib
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
 
-🔍 Machine Learning Approach
-1️⃣ Data Preprocessing
+Target:
+- BMI Prediction
 
-Handling missing values
+Evaluation Metrics:
+- Mean Absolute Error (MAE)
+- R² Score
 
-Label encoding and one-hot encoding for categorical features
+---
 
-Feature scaling using StandardScaler
+### 4. Classification Models
 
-Train-test split for model evaluation
+- Logistic Regression
+- Decision Tree Classifier
+- Random Forest Classifier
 
-2️⃣ Model Training & Evaluation
+Target:
+- Obesity Level Prediction
 
-Regression Models (BMI Prediction):
+Evaluation Metrics:
+- Accuracy
+- F1 Score
 
-Linear Regression
+---
 
-Decision Tree Regressor
+### 5. Model Selection
 
-Random Forest Regressor
+Multiple algorithms were evaluated to identify the best-performing model based on evaluation metrics. Random Forest achieved the highest overall performance for both regression and classification tasks.
 
-K-Nearest Neighbors Regressor
+---
 
-Classification Models (Obesity Level Prediction):
+### 6. Model Deployment
 
-Logistic Regression
+The selected models were serialized using Joblib and integrated into a Streamlit application that accepts user inputs and generates real-time predictions.
 
-Decision Tree Classifier
+---
 
-Random Forest Classifier
+## Features
 
-K-Nearest Neighbors Classifier
+- BMI Prediction
+- Obesity Level Classification
+- Interactive User Interface
+- Real-time Predictions
+- Machine Learning Model Comparison
 
-3️⃣ Model Selection
+---
 
-Regression models evaluated using MAE and R² score
+## Project Workflow
 
-Classification models evaluated using Accuracy and F1-score
+User Input
 
-Best-performing models automatically selected based on evaluation metrics
+↓
 
-🚀 Deployment
+Data Preprocessing
 
-Developed an interactive Streamlit web application
+↓
 
-Allows users to enter lifestyle and physical details in real time
+Model Prediction
 
-Uses trained models to predict BMI and obesity level instantly
+↓
 
-Ensures consistent preprocessing during inference
+BMI Prediction
 
-📈 Key Features
+↓
 
-End-to-end machine learning pipeline
+Obesity Classification
 
-Combined regression and classification in a single project
+↓
 
-Automated best model selection
+Display Results
 
-Real-time predictions via web interface
+---
 
-Beginner-friendly and scalable design
+## Learning Outcomes
+
+- End-to-end Machine Learning workflow
+- Data preprocessing techniques
+- Regression and classification algorithms
+- Model evaluation and comparison
+- Streamlit application development
+- Model deployment using Joblib
+
+---
+
+## Future Enhancements
+
+- Integration with cloud deployment platforms
+- User authentication
+- Personalized health recommendations
+- Real-time health analytics dashboard
+- Expanded dataset for improved generalization
